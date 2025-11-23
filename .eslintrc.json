@@ -1,0 +1,13 @@
+{
+    "env": {
+      "node": true,  // Adiciona o ambiente Node.js
+      "es2021": true // Definindo o ES2021 como alvo
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      // Suas regras personalizadas, se necessário
+    }
+  }
+  
