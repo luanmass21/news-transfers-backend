@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ 
 
 // import express from 'express';
 // import cors from 'cors';
@@ -85,6 +85,8 @@
 // });
 
 
+import dotenv from "dotenv";
+dotenv.config();
 
 import express from 'express';
 import cors from 'cors';
@@ -92,6 +94,7 @@ import pkg from 'pg';
 const { Client } = pkg;
 
 const client = new Client({
+  // eslint-disable-next-line no-undef
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }
 });
@@ -99,6 +102,7 @@ const client = new Client({
 client.connect();
 
 const app = express();
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
 
@@ -124,4 +128,4 @@ app.post('/enviar-email', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log("Rodando na porta " + PORT));
+// app.listen(PORT, () => console.log("Rodando na porta " + PORT));
